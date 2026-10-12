@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF9EE"
+    tools:context=".BermainActivity">
+
+    <!-- Wave Coklat -->
+    <View
+        android:id="@+id/waveBawah"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/wave_bawah"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- HEADER KUNING -->
+    <View
+        android:id="@+id/headerGame"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#FFC928"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TOMBOL KEMBALI -->
+    <ImageButton
+        android:id="@+id/btnKembali"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:background="@android:color/transparent"
+        android:src="@android:drawable/ic_menu_revert"
+        android:contentDescription="Kembali"
+
+        app:layout_constraintTop_toTopOf="@id/headerGame"
+        app:layout_constraintBottom_toBottomOf="@id/headerGame"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- NOMOR SOAL -->
+    <TextView
+        android:id="@+id/tvNomorSoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOAL 1/10"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#3B250F"
+
+        app:layout_constraintTop_toTopOf="@id/headerGame"
+        app:layout_constraintBottom_toBottomOf="@id/headerGame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- SKOR -->
+    <TextView
+        android:id="@+id/tvSkor"
+        android:layout_width="65dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:text="⭐ 0"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#3B250F"
+        android:background="@drawable/bg_skor"
+
+        app:layout_constraintTop_toTopOf="@id/headerGame"
+        app:layout_constraintBottom_toBottomOf="@id/headerGame"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- KOTAK GAMBAR -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardGambar"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="25dp"
+
+        app:cardCornerRadius="18dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFFFFF"
+
+        app:layout_constraintTop_toBottomOf="@id/headerGame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imgLogoKopi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:scaleType="centerInside"
+            android:contentDescription="Logo kedai kopi" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- PERTANYAAN -->
+    <TextView
+        android:id="@+id/tvPertanyaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="Logo dari brand kopi mana ini?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#3B250F"
+
+        app:layout_constraintTop_toBottomOf="@id/cardGambar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- INPUT JAWABAN -->
+    <EditText
+        android:id="@+id/etJawaban"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textColor="#000000"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="18dp"
+        android:hint="Ketik jawaban kamu..."
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:textSize="17sp"
+        android:singleLine="true"
+        android:background="@drawable/bg_input"
+
+        app:layout_constraintTop_toBottomOf="@id/tvPertanyaan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TOMBOL JAWAB -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnJawab"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:text="JAWAB"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#3B250F"
+        android:elevation="5dp"
+
+        app:backgroundTint="#FFC928"
+        app:cornerRadius="18dp"
+
+        app:layout_constraintTop_toBottomOf="@id/etJawaban"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- FEEDBACK -->
+    <TextView
+        android:id="@+id/tvFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+
+        app:layout_constraintTop_toBottomOf="@id/btnJawab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- TOMBOL SKIP -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSkip"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+
+        android:text="LEWATI SOAL"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#3B250F"
+
+        app:backgroundTint="#E8D8C0"
+        app:cornerRadius="15dp"
+
+        app:layout_constraintTop_toBottomOf="@id/tvFeedback"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

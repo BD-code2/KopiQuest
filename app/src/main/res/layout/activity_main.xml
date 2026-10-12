@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF9EE"
+    tools:context=".MainActivity">
+
+    <!-- LOGO KOPIQUEST -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:src="@drawable/logo_kopi_quest"
+        android:scaleType="centerInside"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="60dp" />
+
+    <!-- TOMBOL MULAI BERMAIN -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMulai"
+        android:layout_width="280dp"
+        android:layout_height="65dp"
+
+        android:text="▶  MULAI BERMAIN"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#3B250F"
+
+        android:elevation="6dp"
+
+        app:backgroundTint="#FFC928"
+        app:cornerRadius="18dp"
+
+        app:layout_constraintTop_toBottomOf="@id/imgLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="10dp" />
+
+    <!-- TOMBOL TENTANG -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTentang"
+        android:layout_width="280dp"
+        android:layout_height="65dp"
+
+        android:text="ⓘ  TENTANG"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#3B250F"
+
+        android:elevation="6dp"
+
+        app:backgroundTint="#FFC928"
+        app:cornerRadius="18dp"
+
+        app:layout_constraintTop_toBottomOf="@id/btnMulai"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="15dp" />
+
+    <!-- DEKORASI BAWAH -->
+    <View
+        android:id="@+id/waveBawah"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/wave_bawah"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

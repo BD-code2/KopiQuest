@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="Theme.KopiQuest.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#FFF9EE</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_kopi_quest</item>
+        <item name="postSplashScreenTheme">@style/Theme.KopiQuest</item>
+    </style>
+
+    <style name="Theme.KopiQuest" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+</resources>
